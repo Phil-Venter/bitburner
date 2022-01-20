@@ -31,66 +31,66 @@ export async function main(ns) {
 
             switch (inputType) {
                 case "Algorithmic Stock Trader I":
-                    if(inputData.length > 1)voutputData = await solverStockTrader(ns, [1, inputData]);
+                    if(inputData.length > 1)voutputData = await stockTrader(ns, [1, inputData]);
                     else outputData = 0;
                     outputResult = ns.codingcontract.attempt(outputData, listFiles[z], listServers[listIndex]);
                     break;
                 case "Algorithmic Stock Trader II":
-                    if(inputData.length > 1) outputData = await solverStockTrader(ns, [Math.floor(inputData.length / 2), inputData]);
+                    if(inputData.length > 1) outputData = await stockTrader(ns, [Math.floor(inputData.length / 2), inputData]);
                     else outputData = 0;
                     outputResult = ns.codingcontract.attempt(outputData, listFiles[z], listServers[listIndex]);
                     break;
                 case "Algorithmic Stock Trader III":
-                    if(inputData.length > 1) outputData = await solverStockTrader(ns, [2, inputData]);
+                    if(inputData.length > 1) outputData = await stockTrader(ns, [2, inputData]);
                     else outputData = 0;
                     outputResult = ns.codingcontract.attempt(outputData, listFiles[z], listServers[listIndex]);
                     break;
                 case "Algorithmic Stock Trader IV":
-                    outputData = await solverStockTrader(ns, inputData);
+                    outputData = await stockTrader(ns, inputData);
                     outputResult = ns.codingcontract.attempt(outputData, listFiles[z], listServers[listIndex]);
                     break;
                 case "Array Jumping Game":
-                    outputData = await solverArrayJumpingGame(ns, inputData);
+                    outputData = await arrayJumpingGame(ns, inputData);
                     outputResult = ns.codingcontract.attempt(outputData, listFiles[z], listServers[listIndex]);
                     break;
                 case "Find All Valid Math Expressions":
-                    outputData = await solverWaysToExpress(ns, inputData);
+                    outputData = await waysToExpress(ns, inputData);
                     outputResult = ns.codingcontract.attempt(outputData, listFiles[z], listServers[listIndex]);
                     break;
                 case "Find Largest Prime Factor":
-                    outputData = await solverLargestPrime(ns, inputData);
+                    outputData = await largestPrime(ns, inputData);
                     outputResult = ns.codingcontract.attempt(outputData, listFiles[z], listServers[listIndex]);
                     break;
                 case "Generate IP Addresses":
-                    outputData = await solverGenerateIPs(ns, inputData);
+                    outputData = await generateIPs(ns, inputData);
                     outputResult = ns.codingcontract.attempt(outputData, listFiles[z], listServers[listIndex]);
                     break;
                 case "Merge Overlapping Intervals":
-                    outputData = await solverMergeRanges(ns, inputData);
+                    outputData = await mergeRanges(ns, inputData);
                     outputResult = ns.codingcontract.attempt(outputData, listFiles[z], listServers[listIndex]);
                     break;
                 case "Minimum Path Sum in a Triangle":
-                    outputData = await solverTrianglePath(ns, inputData);
+                    outputData = await trianglePath(ns, inputData);
                     outputResult = ns.codingcontract.attempt(outputData, listFiles[z], listServers[listIndex]);
                     break;
                 case "Spiralize Matrix":
-                    outputData = await solverSpiralizeMatrix(ns, inputData);
+                    outputData = await spiralizeMatrix(ns, inputData);
                     outputResult = ns.codingcontract.attempt(outputData, listFiles[z], listServers[listIndex]);
                     break;
                 case "Subarray with Maximum Sum":
-                    outputData = await solverLargestSubset(ns, inputData);
+                    outputData = await largestSubset(ns, inputData);
                     outputResult = ns.codingcontract.attempt(outputData, listFiles[z], listServers[listIndex]);
                     break;
                 case "Total Ways to Sum":
-                    outputData = await solverWaysToSum(ns, inputData);
+                    outputData = await waysToSum(ns, inputData);
                     outputResult = ns.codingcontract.attempt(outputData, listFiles[z], listServers[listIndex]);
                     break;
                 case "Unique Paths in a Grid I":
-                    outputData = await solverUniquePaths(ns, inputData);
+                    outputData = await uniquePaths(ns, inputData);
                     outputResult = ns.codingcontract.attempt(outputData, listFiles[z], listServers[listIndex]);
                     break;
                 case "Unique Paths in a Grid II":
-                    outputData = await solverUniquePathsII(ns, inputData);
+                    outputData = await uniquePathsII(ns, inputData);
                     outputResult = ns.codingcontract.attempt(outputData, listFiles[z], listServers[listIndex]);
                     break;
                 default:
