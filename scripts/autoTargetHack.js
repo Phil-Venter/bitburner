@@ -28,13 +28,13 @@ export async function main(ns) {
 		for (let server of rootedServers) {
 			if (ns.getServerUsedRam(server) > 0) { continue; }
 
-			const [ minSecurity, security ] = calculateMoney(ns, server);
-			const [ maxMoney, money ] = calculateMoney(ns, server);
+			const { minSecurity, security } = calculateSecurity(ns, server);
+			const { maxMoney, money } = calculateMoney(ns, server);
 
 			const threads = Math.floor(ns.getServerMaxRam(server) / 1.75);
 
 			let script = _hack;
-			if(security > minSecurity + minSecurityOffset) {
+			if (security > minSecurity + minSecurityOffset) {
 				script = _weaken;
 			} else if (money < maxMoney * maxMoneyOffset) {
 				script = _grow;

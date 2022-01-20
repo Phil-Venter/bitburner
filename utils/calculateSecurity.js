@@ -1,3 +1,6 @@
-async function calculateSecurity(ns, server) {
-	return [ns.getServerMinSecurityLevel(server), ns.getServerSecurityLevel(server)];
+export async function calculateSecurity(ns, server) {
+	return {
+		minSecurity: ns.getServerMinSecurityLevel(server),
+		security: ns.getServerSecurityLevel(server),
+	};
 }

@@ -35,8 +35,8 @@ export async function main(ns) {
 
 			if (ns.getServerUsedRam(server) > 0) { continue; }
 
-			const [ minSecurity, security ] = calculateMoney(ns, target);
-			const [ maxMoney, money ] = calculateMoney(ns, target);
+			const { minSecurity, security } = calculateSecurity(ns, server);
+			const { maxMoney, money } = calculateMoney(ns, server);
 
 			const threads = Math.floor(ns.getServerMaxRam(server) / 1.75);
 

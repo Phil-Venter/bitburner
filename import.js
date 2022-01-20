@@ -1,4 +1,4 @@
-const rootUrl: 'https://raw.githubusercontent.com/Phil-Venter/bitburner/main/';
+const rootUrl = 'https://raw.githubusercontent.com/Phil-Venter/bitburner/main/';
 
 export async function main(ns) {
   let filesImported = await importFiles(ns);
@@ -31,13 +31,13 @@ async function importFiles(ns) {
     '/scripts/autoHacknet.js',
     '/scripts/autoServerHack.js',
     '/scripts/autoTargetHack.js',
+    '/scripts/findServer.js',
     '/scripts/getAllLit.js',
     '/scripts/rootServers.js',
     '/utils/allServers.js',
     '/utils/calculateMoney.js',
     '/utils/calculateSecurity.js',
     '/utils/copyFiles.js',
-    '/utils/findServer.js',
     '/utils/rootServers.js',
   ];
 

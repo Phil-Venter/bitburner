@@ -1,3 +1,6 @@
-async function calculateMoney(ns, server) {
-	return [ns.getServerMaxMoney(server), ns.getServerMoneyAvailable(server)];
+export async function calculateMoney(ns, server) {
+	return {
+		money: ns.getServerMoneyAvailable(server),
+		maxMoney: ns.getServerMaxMoney(server),
+	};
 }
